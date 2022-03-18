@@ -7,7 +7,7 @@ Molim vas izmijenite ovaj dokument kako bi u njega naveli naziv i kratak opisa p
 
 A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta, te izbrišite sve što je iznad Naziva projekta, kao i sve upute koje su navedene u zagradama u predlošku ispod :) 
 
-# Naziv projekta
+# Korisnički zahtjevi za Softver za provedbu nabave tehničke opreme na fakultetu
 (u redak iznad navedite naziv projekta kojeg ste dobili za analizu)
 
 ## Podaci o studentu
@@ -15,14 +15,14 @@ A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg program
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
+Ivana Belinić | ibelinic20@foi.hr | 0016147210 | ibelinic
 
 
 ## Opis domene
-Umjesto ovih uputa vlastitim riječima opišite domenu ili problem koji pokriva projekt za vaše zadaće. 
+Problemska domena kojom se dokument bavi specificirati je zahtjeve za implementiranje softverskog rješenja za nabavu potrebne tehničke opreme na fakultetu informatiziranim putem. Naime, dokument prikazuje potrebne funkcionalnosti samog budućeg softverskog rješenja koje bi trebali biti implementirane u isti pri čemu bi svaki sudionik kreiranja softverskog rješenja bio upućen u potrebne modularnosti.
 
 ## Specifikacija projekta
-Umjesto ovih uputa vlastitim riječima opišite zahtjeve za funkcionalnošću programskog proizvoda.
+Dokumentom se želi postići jadna i detaljna specifikacija korisnikovih zahtjeva na temelju kojih bi implementirao softver. Softver bi trebao moći ostvariti sve zahtjeve korisnika te osigurati prvotnu potrebu za korištenjem softvera, odnosno potrebu za informatiziranom nabavom tehničke opreme putem digitalnog sustava.
 
 ## Zadatak
 U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje.
