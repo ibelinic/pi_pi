@@ -8,10 +8,8 @@ Molim vas izmijenite ovaj dokument kako bi u njega naveli naziv i kratak opisa p
 A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta, te izbrišite sve što je iznad Naziva projekta, kao i sve upute koje su navedene u zagradama u predlošku ispod :) 
 
 # Korisnički zahtjevi za Softver za provedbu nabave tehničke opreme na fakultetu
-(u redak iznad navedite naziv projekta kojeg ste dobili za analizu)
 
 ## Podaci o studentu
-(ispod promijenite samo drugi redak tablice)
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
@@ -25,7 +23,7 @@ Problemska domena kojom se dokument bavi specificirati je zahtjeve za implementi
 Dokumentom se želi postići jadna i detaljna specifikacija korisnikovih zahtjeva na temelju kojih bi implementirao softver. Softver bi trebao moći ostvariti sve zahtjeve korisnika te osigurati prvotnu potrebu za korištenjem softvera, odnosno potrebu za informatiziranom nabavom tehničke opreme putem digitalnog sustava.
 
 ## Zadatak
-U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje.
+https://github.com/foivz/pi22-zadace-ibelinic/blob/master/Korisni%C4%8Dki%20zahtjevi%20-%20proces%20nabave%20opreme.pdf
 
 ## Resursi
 Github Markdown sintaksa dostupna je na [ovom linku](https://guides.github.com/features/mastering-markdown/) ali i na Moodleu u sekciji Zadaće.
