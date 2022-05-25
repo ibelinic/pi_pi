@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace iThings_1._0
         public Form1()
         {
             InitializeComponent();
+            DB.SetConfiguration("ibelinic20_DB", "ibelinic20", "CTvZ;12l");
         }
     }
 }
