@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace iThings_1._0.Models
 {
-    internal class Zahtjev
+    public class Zahtjev
     {
         public int Id { get; set; }
 
@@ -16,10 +16,9 @@ namespace iThings_1._0.Models
 
         public DateTime DatumPodnosenja { get; set; }
 
-        public string SifraOpreme { get; set; }
 
-        public string NazivOpreme { get; set; }
+        public string Naziv { get; set; }
 
-        public int KolicinaOpreme { get; set; }
+        public int Kolicina { get; set; }
     }
 }
