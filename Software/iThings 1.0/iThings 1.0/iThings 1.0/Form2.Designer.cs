@@ -36,12 +36,15 @@
             this.labNaziv = new System.Windows.Forms.Label();
             this.labKolicina = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labid
@@ -120,13 +123,13 @@
             this.textBox1.Size = new System.Drawing.Size(273, 26);
             this.textBox1.TabIndex = 7;
             // 
-            // textBox2
+            // txtID
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(205, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 26);
-            this.textBox2.TabIndex = 8;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtID.Location = new System.Drawing.Point(205, 15);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(273, 26);
+            this.txtID.TabIndex = 8;
             // 
             // textBox3
             // 
@@ -164,7 +167,7 @@
             // 
             this.btnInsert.BackColor = System.Drawing.SystemColors.Desktop;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnInsert.Location = new System.Drawing.Point(657, 19);
+            this.btnInsert.Location = new System.Drawing.Point(653, 15);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(111, 42);
             this.btnInsert.TabIndex = 13;
@@ -172,18 +175,50 @@
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(653, 84);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 32);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Izbriši";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(653, 162);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 39);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Ažuriraj";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(657, 251);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Pretraži";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(911, 565);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labKolicina);
             this.Controls.Add(this.labNaziv);
@@ -209,11 +244,14 @@
         private System.Windows.Forms.Label labNaziv;
         private System.Windows.Forms.Label labKolicina;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

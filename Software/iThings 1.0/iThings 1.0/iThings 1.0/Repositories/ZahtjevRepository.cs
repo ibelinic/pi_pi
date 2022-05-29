@@ -48,7 +48,7 @@ namespace iThings_1._0.Repositories
             int id = int.Parse(reader["Id"].ToString());
             string podnositelj = reader["Podnositelj"].ToString();
             string status = reader["Status"].ToString();
-            DateTime datumPodnosenja = DateTime.Parse(reader["DatumPodnosenja"].ToString());
+            string datumPodnosenja = reader["DatumPodnosenja"].ToString();
             string naziv = reader["Naziv"].ToString();
             int kolicina = int.Parse(reader["Kolicina"].ToString());
             var zahtjev = new Zahtjev
@@ -62,9 +62,32 @@ namespace iThings_1._0.Repositories
             };
             return zahtjev;
 
-
-
-
         }
+
+        public static void InsertIntoZahtjev(int id, string podnositelj, string status, string datumPodnosenja, string naziv, int kolicina)
+        {
+            string sql = $"INSERT INTO Zahtjev (Id, Podnositelj, Status, DatumPodnosenja, Naziv, Kolicina) VALUES('{id}', '{podnositelj}','{status}','{datumPodnosenja}', '{naziv}', '{kolicina}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void DeleteFromZahtjev(int id)
+        {
+            string sql = $"DELETE Zahtjev WHERE Id = '{id}' ";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void UpdateFromZahtjev (Zahtjev zahtjev, string podnositelj, string status, string datumPodnosenja, string naziv, int kolicina)
+        {
+            string sql = $"UPDATE Zahtjev SET Podnositelj = {podnositelj}, Status = {status}, DatumPodnosenja = {datumPodnosenja}, Naziv = {naziv}, Kolicina = {kolicina} WHERE Id = {zahtjev.Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+
     }
 }

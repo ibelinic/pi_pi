@@ -16,8 +16,6 @@ namespace iThings_1._0
     public partial class FrmPopisZahtjeva : Form
     {
 
-        private Zahtjev zahtjev;
-
         public FrmPopisZahtjeva()
         {
             InitializeComponent();
@@ -31,13 +29,14 @@ namespace iThings_1._0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            showZahtjevi();
         }
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
             showZahtjevi();
-            InsertIntoZahtjev(zahtjev);
         }
 
         private void showZahtjevi()
@@ -45,12 +44,6 @@ namespace iThings_1._0
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
         }
-        public static void InsertIntoZahtjev(Zahtjev zahtjev)
-        {
-            string sql = $"INSERT INTO Zahtjev (Id, Podnositelj, Status, DatumPodnosenja, Naziv, Kolicina) VALUES({zahtjev.Id}, {zahtjev.Podnositelj},{zahtjev.Status},{zahtjev.DatumPodnosenja}, {zahtjev.Naziv}, {zahtjev.Kolicina})";
-            DB.OpenConnection();
-            DB.ExecuteCommand(sql);
-            DB.CloseConnection();
-        }
+        
     }
 }

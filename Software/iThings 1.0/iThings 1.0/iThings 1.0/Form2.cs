@@ -15,7 +15,6 @@ namespace iThings_1._0
 {
     public partial class Form2 : Form
     {
-
         public Form2()
         {
             InitializeComponent();
@@ -24,6 +23,37 @@ namespace iThings_1._0
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            int id = int.Parse(txtID.Text.ToString());
+            string podnositelj = textBox1.Text;
+            string status = textBox3.Text;
+            string datumPodnosenja = textBox4.Text;
+            string naziv = textBox5.Text;
+            int kolicina = int.Parse(textBox6.Text);
+
+            ZahtjevRepository.InsertIntoZahtjev(id, podnositelj, status, datumPodnosenja, naziv, kolicina);
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(txtID.Text.ToString());
+            ZahtjevRepository.DeleteFromZahtjev(id);
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            int id = int.Parse(txtID.Text.ToString());
+            string podnositelj = textBox1.Text;
+            string status = textBox3.Text;
+            string datumPodnosenja = textBox4.Text;
+            string naziv = textBox5.Text;
+            int kolicina = int.Parse(textBox6.Text.ToString());
+
+            //ZahtjevRepository.UpdateFromZahtjev(zahtjev, podnositelj, status, datumPodnosenja, naziv, kolicina);
+            Close();
+
         }
     }
 }
