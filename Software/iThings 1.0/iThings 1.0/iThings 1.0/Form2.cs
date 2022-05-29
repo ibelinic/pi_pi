@@ -15,6 +15,9 @@ namespace iThings_1._0
 {
     public partial class Form2 : Form
     {
+
+        private Zahtjev zahtjev;
+        
         public Form2()
         {
             InitializeComponent();
@@ -51,9 +54,15 @@ namespace iThings_1._0
             string naziv = textBox5.Text;
             int kolicina = int.Parse(textBox6.Text.ToString());
 
-            //ZahtjevRepository.UpdateFromZahtjev(zahtjev, podnositelj, status, datumPodnosenja, naziv, kolicina);
+            ZahtjevRepository.UpdateFromZahtjev(id, podnositelj, status, datumPodnosenja, naziv, kolicina);
             Close();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text.ToString());
+            dgvPretragaZahtjev.DataSource = ZahtjevRepository.Pretraga(id);
         }
     }
 }

@@ -45,6 +45,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dgvPretragaZahtjev = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPretragaZahtjev)).BeginInit();
             this.SuspendLayout();
             // 
             // labid
@@ -203,13 +205,25 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Pretraži";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dgvPretragaZahtjev
+            // 
+            this.dgvPretragaZahtjev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPretragaZahtjev.Location = new System.Drawing.Point(12, 335);
+            this.dgvPretragaZahtjev.Name = "dgvPretragaZahtjev";
+            this.dgvPretragaZahtjev.RowHeadersWidth = 51;
+            this.dgvPretragaZahtjev.RowTemplate.Height = 24;
+            this.dgvPretragaZahtjev.Size = new System.Drawing.Size(1004, 368);
+            this.dgvPretragaZahtjev.TabIndex = 17;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(911, 565);
+            this.ClientSize = new System.Drawing.Size(1037, 715);
+            this.Controls.Add(this.dgvPretragaZahtjev);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -229,6 +243,7 @@
             this.Controls.Add(this.labid);
             this.Name = "Form2";
             this.Text = "Aktivnosti sa zahtjevima";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPretragaZahtjev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +268,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dgvPretragaZahtjev;
     }
 }

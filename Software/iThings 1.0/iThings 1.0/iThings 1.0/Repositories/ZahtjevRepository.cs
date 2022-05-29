@@ -80,12 +80,29 @@ namespace iThings_1._0.Repositories
             DB.CloseConnection();
         }
 
-        public static void UpdateFromZahtjev (Zahtjev zahtjev, string podnositelj, string status, string datumPodnosenja, string naziv, int kolicina)
+        public static void UpdateFromZahtjev (int id, string podnositelj, string status, string datumPodnosenja, string naziv, int kolicina)
         {
-            string sql = $"UPDATE Zahtjev SET Podnositelj = {podnositelj}, Status = {status}, DatumPodnosenja = {datumPodnosenja}, Naziv = {naziv}, Kolicina = {kolicina} WHERE Id = {zahtjev.Id}";
+            string sql = $"UPDATE Zahtjev SET Podnositelj = '{podnositelj}', Status = '{status}', DatumPodnosenja = '{datumPodnosenja}', Naziv = '{naziv}', Kolicina = {kolicina} WHERE Id = {id}";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
+        }
+
+
+        public static List<Zahtjev> Pretraga(int id)
+        {
+            var zahtjevi = new List<Zahtjev>();
+            string sql = $"SELECT * FROM Zahtjev WHERE Id = {id}";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Zahtjev zahtjev = CreateObject(reader);
+                zahtjevi.Add(zahtjev);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return zahtjevi;
         }
 
 
