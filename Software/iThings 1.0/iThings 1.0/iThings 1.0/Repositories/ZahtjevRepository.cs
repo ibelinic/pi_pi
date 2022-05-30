@@ -89,10 +89,26 @@ namespace iThings_1._0.Repositories
         }
 
 
-        public static List<Zahtjev> Pretraga(int id)
+        public static List<Zahtjev> PretragaID(int id)
         {
             var zahtjevi = new List<Zahtjev>();
             string sql = $"SELECT * FROM Zahtjev WHERE Id = {id}";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Zahtjev zahtjev = CreateObject(reader);
+                zahtjevi.Add(zahtjev);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return zahtjevi;
+        }
+
+        public static List<Zahtjev> PretragaStatus(string status)
+        {
+            var zahtjevi = new List<Zahtjev>();
+            string sql = $"SELECT * FROM Zahtjev WHERE Status = '{status}'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())

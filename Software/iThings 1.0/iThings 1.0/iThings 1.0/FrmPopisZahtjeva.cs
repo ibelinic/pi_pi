@@ -34,8 +34,8 @@ namespace iThings_1._0
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            frm2.ShowDialog();
+            FormDataActivities FormaAktivnostisPodacima = new FormDataActivities();
+            FormaAktivnostisPodacima.ShowDialog();
             showZahtjevi();
         }
 
@@ -44,6 +44,10 @@ namespace iThings_1._0
             List<Zahtjev> zahtjevi = ZahtjevRepository.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
         }
-        
+
+        private void btnZatvori_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

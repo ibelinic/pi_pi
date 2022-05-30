@@ -13,12 +13,12 @@ using iThings_1._0.Models;
 
 namespace iThings_1._0
 {
-    public partial class Form2 : Form
+    public partial class FormDataActivities : Form
     {
 
         private Zahtjev zahtjev;
         
-        public Form2()
+        public FormDataActivities()
         {
             InitializeComponent();
             DB.SetConfiguration("ibelinic20_DB", "ibelinic20", "'CTvZ;12l'");
@@ -59,10 +59,16 @@ namespace iThings_1._0
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void btnFinish_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtID.Text.ToString());
-            dgvPretragaZahtjev.DataSource = ZahtjevRepository.Pretraga(id);
+            Application.Exit(); 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormSearching FormaPretrazivanja = new FormSearching();
+            FormaPretrazivanja.ShowDialog();
         }
     }
 }
